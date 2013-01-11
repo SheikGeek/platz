@@ -2,6 +2,12 @@
 <html>
 <head>
   <title>Eventagon</title>
+  <% Dir[Rails.root.join("app/assets/ejs/*.ejs")].each do |template| %>
+    <script type="text/x-ejs" id="<%= File.basename(template, ".ejs").gsub(/[\s_]/, "-") %>-tmpl">
+      <%= File.read(template).html_safe %>
+    </script>
+  <% end %>
+  <script src="http://www.google.com/jsapi"></script>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>

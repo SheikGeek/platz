@@ -10,6 +10,7 @@ class GooglePollTest < ActiveSupport::TestCase
     end
     event = Event.last
     assert_equal "YWlqYmhwb3Qyczc1YWhkdXBsamQ3Z3NnNm8gY2MxM3NxdWFyZXRlc3RAbQ", event.google_event_id
+    assert_equal , event.occurs_at
   end
 
   test "doesn't duplicate data from google calendar" do

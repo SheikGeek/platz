@@ -1,0 +1,15 @@
+<ul class="event-list">
+  <% $.each(entries, function(index, entry){ %>
+    <li class="event-info">
+      <span class="eventid" style="display:none;" eventid='<%= entry.id.$t %>'></span>
+      <a class='event' href=""><%= entry.getTitle().getText() %></a>
+      <div class='occurs-at'>
+        <%= Platz.humanizeTime(entry.gd$when[0].startTime) %>
+        <%= Platz.humanizeTime(entry.gd$when[0].endTime) %>
+      </div>
+      <div class='where'>
+        <%= entry.gd$where[0].valueString %>
+      </div>
+    </li>
+  <% }) %>
+</ul>

@@ -1,0 +1,22 @@
+<a class='back' href="">Back</a>
+<div class="event-page-wrapper">
+  <div class="info-wrapper">
+    <h1><%= event.getTitle().getText() %></h1>
+    <div name="event-details" class="event-details">
+      <%= event.gd$where[0].valueString %></br>
+      <%= Platz.humanizeTime(event.gd$when[0].startTime) %>
+      <%= Platz.humanizeTime(event.gd$when[0].endTime) %>
+    </div>
+  </div>
+
+  <div name="map" class="map">
+    <img width="425" height="350" src=""/>
+  </div>
+  
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>

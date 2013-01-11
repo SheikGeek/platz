@@ -1,23 +1,4 @@
-
 <iframe class="event-calendar"src="https://www.google.com/calendar/embed?src=2d59pfgvh7109cp3k9g167d3f4%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="700" height="600" frameborder="0" scrolling="no"></iframe>
-
-<div class="events-list">
-	<h3>Upcoming Events</h3>
-	<table>
-	
-	<% @created_events.each do |event| %>
-	  <tr>
-		  <td>
-			  <img src="http://placekitten.com/80/80" />
-		  </td>
-	    <td>
-	     <%= link_to event.name, event, :class => "event-name" %><br />
-	
-	      <%= event.street %>
-	      <%= event.zip_code %>
-	      <%= event.occurs_at.try(:strftime, "%B %d, %l:%M %p") %>
-	    </td>
-	  </tr>
-	<% end %>
-	</table>
+<h3>Square Events</h3>
+<div id='events'>
 </div>

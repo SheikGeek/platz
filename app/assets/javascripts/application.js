@@ -13,3 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+Platz = {};
+
+Platz.renderPartial = function renderPartial(name, locals){
+  var tmpl = $('#' + name + '-tmpl').text();
+  return $(ejs.render(tmpl, locals));
+}
+
+Platz.humanizeTime = function humanizeTime(timeString) {
+  var momentDate = moment(Date.parse(timeString));
+  return momentDate.format('MMMM Do YYYY, h:mm:ss a');
+}
