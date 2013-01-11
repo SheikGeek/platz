@@ -5,9 +5,14 @@ gem 'pg'
 gem 'activerecord-postgresql-adapter'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "google-api-client", :require => "google/api_client"
+gem "nokogiri"
 
 group :deployment do
   gem "heroku"
+end
+
+group :test do
+  gem "webmock"
 end
 
 # Gems used only for assets and not required
