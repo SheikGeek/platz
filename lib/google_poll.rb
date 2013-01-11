@@ -5,13 +5,21 @@ class GooglePoll
   MAGIC_COOKIE = ENV["GOOGLE_MAGIC_COOKIE"]
   USER_ID = ENV["GOOGLE_USER_ID"]
 
-  def self.work
+  def self.import
     atom_data = fetch_calendar(calendar_uri)
     event_entries = Nokogiri.XML(atom_data).css("feed entry")
     event_entries.each do |event_entry|
       uri = URI(event_entry.at("link[rel=alternate]")['href'])
       event_id = uri.query.split("&").map {|key_val| key_val.split("=") }.detect{|param, value| param == "eid"}.last
-      Event.create!(:google_event_id => event_id)
+      Rails.logger.info("found event: #{event_id}")
+      Event.find_or_create_by_google_event_id(event_id)
+    end
+  end
+
+  def self.work
+    while(true)
+      import
+      sleep(10)
     end
   end
 
