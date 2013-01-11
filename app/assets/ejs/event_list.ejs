@@ -5,7 +5,6 @@
       <a class='event' href=""><%= entry.getTitle().getText() %></a>
       <div class='occurs-at'>
         <%= Platz.humanizeTime(entry.gd$when[0].startTime) %>
-        <%= Platz.humanizeTime(entry.gd$when[0].endTime) %>
       </div>
       <div class='where'>
         <%= entry.gd$where[0].valueString %>
