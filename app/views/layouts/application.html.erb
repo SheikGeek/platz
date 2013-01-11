@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Platz</title>
+  <title>Eventagon</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+<header>
+	Eventagon
+	<ul name=header-links>
+		<li>Home</li>
+		<li>My Events</li>
+		<li>Create Event</li>
+		<li>Log In</li>
+	</ul>
+</header>
 <body class="<%= params[:controller] %>">
   <div id="container">
     <% flash.each do |name, msg| %>

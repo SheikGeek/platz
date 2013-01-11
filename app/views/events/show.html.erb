@@ -12,4 +12,9 @@
   <% else %>
     <%= link_to 'attend', event_attend_url(@event, :user_id => current_user.id), :method => :post %>
   <% end %>
+  
+  <div name="map">
+	  <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?ie=UTF8&amp;ll=37.752258,-122.437477&amp;spn=0.276882,0.308304&amp;t=m&amp;z=12&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/?ie=UTF8&amp;ll=37.752258,-122.437477&amp;spn=0.276882,0.308304&amp;t=m&amp;z=12&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+  </div>
+  
 </div>

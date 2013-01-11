@@ -1,3 +1,4 @@
+<header>Eventagon</header>
 <h2> Calendar for Events </h2>
 <iframe src="https://www.google.com/calendar/embed?src=2d59pfgvh7109cp3k9g167d3f4%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
@@ -29,6 +30,8 @@
     <td>
       <%= link_to 'edit', edit_user_event_url(current_user, :id => event.id) %>
       <%= link_to "destroy", user_event_url(current_user, :id => event.id), :method => :delete, :confirm => "Are you sure?" %>
+	  <%= link_to 'event page', event %>
+     
     </td>
   </tr>
 <% end %>

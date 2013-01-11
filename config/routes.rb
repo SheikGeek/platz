@@ -5,6 +5,7 @@ Platz::Application.routes.draw do
   root :to => "events#index"
 
   resources :sessions
+  resources :events
   resources :users do
     resources :events
     post 'attend'

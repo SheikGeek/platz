@@ -11,3 +11,31 @@
  *= require_self
  *= require_tree .
 */
+
+header {
+	
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+header ul {
+	list-style-type: none;
+}
+
+header ul li{
+	padding: 0 20px;
+    display:inline;	
+	
+}
+
+#container {
+	width: 1024px;
+	margin: 0 auto;
+	
+}
+
+h1 {
+	
+}
