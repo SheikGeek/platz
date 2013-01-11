@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:gCal='http://schemas.google.com/gCal/2005'>
+	<id>http://www.google.com/calendar/feeds/someuserid/private-fun/basic</id>
+	<updated>2013-01-11T19:49:38.000Z</updated>
+	<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+	<title type='text'>cc13squaretest@gmail.com</title>
+	<subtitle type='text'>cc13squaretest@gmail.com</subtitle>
+	<link rel='alternate' type='text/html' href='https://www.google.com/calendar/embed?src=someuserid'/>
+	<link rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml' href='https://www.google.com/calendar/feeds/someuserid/private-fun/basic'/>
+	<link rel='http://schemas.google.com/g/2005#batch' type='application/atom+xml' href='https://www.google.com/calendar/feeds/someuserid/private-fun/basic/batch'/>
+	<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/someuserid/private-fun/basic?max-results=25'/>
+	<author>
+		<name>square test</name>
+		<email>cc13squaretest@gmail.com</email>
+	</author>
+	<generator version='1.0' uri='http://www.google.com/calendar'>Google Calendar</generator>
+	<openSearch:totalResults>1</openSearch:totalResults>
+	<openSearch:startIndex>1</openSearch:startIndex>
+	<openSearch:itemsPerPage>25</openSearch:itemsPerPage>
+	<gCal:timezone value='America/Los_Angeles'/><gCal:timesCleaned value='0'/>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/someuserid/private-fun/basic/aijbhpot2s75ahdupljd7gsg6o</id>
+		<published>2013-01-11T19:49:38.000Z</published>
+		<updated>2013-01-11T19:49:38.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Hello World</title>
+		<summary type='html'>When: Fri Jan 11, 2013 12pm to 1pm&amp;nbsp;
+PST&lt;br&gt;
+
+
+&lt;br&gt;Event Status: confirmed</summary>
+		<content type='html'>When: Fri Jan 11, 2013 12pm to 1pm 
+PST&lt;br /&gt;
+
+
+&lt;br /&gt;Event Status: confirmed</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=YWlqYmhwb3Qyczc1YWhkdXBsamQ3Z3NnNm8gY2MxM3NxdWFyZXRlc3RAbQ' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/someuserid/private-fun/basic/aijbhpot2s75ahdupljd7gsg6o'/>
+		<author>
+			<name>cc13squaretest@gmail.com</name>
+			<email>cc13squaretest@gmail.com</email>
+		</author>
+	</entry>
+</feed>
