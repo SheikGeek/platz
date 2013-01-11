@@ -7,12 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <header>
-	Eventagon
+	<h1>Eventagon</h1>
 	<ul name=header-links>
-		<li>Home</li>
-		<li>My Events</li>
-		<li>Create Event</li>
-		<li>Log In</li>
+		<li><%= link_to 'Home', "/" %></li>
+		<li><%= link_to 'My Events', "/events" %></li>
+		<li><%= link_to 'Create Event', "http://calendar.google.com", :target => "_blank" %></li>
+		<li><%= link_to 'Log In' %></li>
 	</ul>
 </header>
 <body class="<%= params[:controller] %>">
