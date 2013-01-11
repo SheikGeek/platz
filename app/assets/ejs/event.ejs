@@ -10,7 +10,11 @@
   </div>
 
   <div name="map" class="map">
-    <img width="425" height="350" src=""/>
+    <% if(event.gd$where[0].valueString){ %>
+      <img width="425" height="350" src="http://maps.googleapis.com/maps/api/staticmap?markers=<%= event.gd$where[0].valueString.replace(/\s+/,"+") %>&zoom=13&size=400x350&maptype=roadmap&sensor=false"/>
+    <% } else { %>
+      <img width="425" height="350" src=""/>
+    <% } %>
   </div>
   
   <div id="disqus_thread"></div>
