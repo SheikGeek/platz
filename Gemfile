@@ -4,6 +4,7 @@ gem 'rails', '3.2.11'
 gem 'pg'
 gem 'activerecord-postgresql-adapter'
 gem "bcrypt-ruby", :require => "bcrypt"
+gem "google-api-client", :require => "google/api_client"
 
 group :deployment do
   gem "heroku"
