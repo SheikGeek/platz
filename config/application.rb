@@ -56,14 +56,14 @@ module Platz
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     config.after_initialize do
-      Thread.new do
-        begin
-          GooglePoll.work
-        rescue  => ex
-          Rails.logger.error("An exception occured in the worker: " + ex.message)
-          Rails.logger.error("An exception occured in the worker: " + ex.backtrace)
-        end
-      end
+      # Thread.new do
+      #   begin
+      #     GooglePoll.work
+      #   rescue  => ex
+      #     Rails.logger.error("An exception occured in the worker: " + ex.message)
+      #     Rails.logger.error("An exception occured in the worker: " + ex.backtrace)
+      #   end
+      # end
     end
   end
 end
