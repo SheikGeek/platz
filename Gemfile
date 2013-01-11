@@ -1,9 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-gem 'mysql2'
-gem 'activerecord-mysql-adapter'
+gem 'pg'
+gem 'activerecord-postgresql-adapter'
 gem "bcrypt-ruby", :require => "bcrypt"
+
+group :deployment do
+  gem "heroku"
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
