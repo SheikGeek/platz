@@ -1,5 +1,8 @@
 <ul class="event-list">
   <% $.each(entries, function(index, entry){ %>
+
+    <img src="http://placekitten.com/80/80" class="thumbnail" />
+
     <li class="event-info">
       <span class="eventid" style="display:none;" eventid='<%= entry.id.$t %>'></span>
       <a class='event' href=""><%= entry.getTitle().getText() %></a>
@@ -10,5 +13,6 @@
         <%= entry.gd$where[0].valueString %>
       </div>
     </li>
+	  	<br>
   <% }) %>
 </ul>

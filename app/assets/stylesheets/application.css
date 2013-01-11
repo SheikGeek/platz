@@ -65,7 +65,17 @@ a:hover {
 	
 }
 
-.event-name {
+.thumbnail{
+	float:left;
+	padding: 0 10px 5px 0;
+}
+
+.event-info{
+	list-style-type: none;
+	
+}
+
+.event {
 	font-size: 18px;
 	font-weight: bold;
 }
