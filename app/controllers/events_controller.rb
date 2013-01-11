@@ -12,15 +12,12 @@ class EventsController < ApplicationController
 
   def create
     @event = current_user.created_events.build(params[:event])
-    :notice => params[:event]
-    #@event.creator = current_user
-    #@event.creator = current_user
-    #@event.creator = current_user
-    #if @event.save
-     # redirect_to user_events_url, :notice => "Event Created!"
-    #else
-     # render "new"
-    #end
+    @event.creator = current_user
+    if @event.save
+      redirect_to user_events_url, :notice => "Event Created!"
+    else
+      render "new"
+    end
   end
 
   def edit
