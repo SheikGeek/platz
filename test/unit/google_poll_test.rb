@@ -6,7 +6,7 @@ class GooglePollTest < ActiveSupport::TestCase
   test "imports data from google calendar" do
     stub_request(:any, "https://www.google.com/calendar/feeds//private-/basic").to_return(:body => GOOGLE_RESPONSE)
     assert_difference "Event.count", 1 do
-      GooglePoll.work
+      GooglePoll.import
     end
     event = Event.last
     assert_equal "YWlqYmhwb3Qyczc1YWhkdXBsamQ3Z3NnNm8gY2MxM3NxdWFyZXRlc3RAbQ", event.google_event_id
@@ -16,7 +16,7 @@ class GooglePollTest < ActiveSupport::TestCase
     Event.create!(:google_event_id => "YWlqYmhwb3Qyczc1YWhkdXBsamQ3Z3NnNm8gY2MxM3NxdWFyZXRlc3RAbQ")
     stub_request(:any, "https://www.google.com/calendar/feeds//private-/basic").to_return(:body => GOOGLE_RESPONSE)
     assert_no_difference "Event.count" do
-      GooglePoll.work
+      GooglePoll.import
     end
   end
 end

@@ -18,7 +18,12 @@ class GooglePoll
 
   def self.work
     while(true)
-      import
+      begin
+        import
+      rescue  => ex
+        Rails.logger.error("An exception occured in the worker: " + ex.message)
+        Rails.logger.error("An exception occured in the worker: " + ex.backtrace)
+      end
       sleep(10)
     end
   end

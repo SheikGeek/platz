@@ -58,12 +58,7 @@ module Platz
     config.after_initialize do
       require 'google_poll'
       Thread.new do
-        begin
-          GooglePoll.work
-        rescue  => ex
-          Rails.logger.error("An exception occured in the worker: " + ex.message)
-          Rails.logger.error("An exception occured in the worker: " + ex.backtrace)
-        end
+        GooglePoll.work
       end
     end
   end
