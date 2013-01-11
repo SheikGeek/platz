@@ -49,13 +49,33 @@ header ul li{
 	
 }
 
+a, a:link, a:hover, a:visited, a:active {
+	text-decoration: none;
+	color: rgb(79, 79, 185);
+}
+
+a:hover {
+	color: rgb(158, 124, 189);
+}
+
 #container {
-	width: 1024px;
+	width: 1200px;
 	margin: 0 auto;
 	background-color: #ecf1ef;
 	
 }
 
-h1 {
+.event-name {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.event-calendar{
+	position:absolute;
 	
+}
+.events-list {
+	width: 450px;
+	margin-left: 750px;
+	min-height: 600px;
 }
