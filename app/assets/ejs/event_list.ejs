@@ -1,10 +1,7 @@
 <ul class="event-list">
   <% $.each(entries, function(index, entry){ %>
-
-    <img src="http://placekitten.com/80/80" class="thumbnail" />
-
     <li class="event-info">
-      <span class="eventid" style="display:none;" eventid='<%= entry.id.$t %>'></span>
+      <img src="http://placekitten.com/80/80" class="thumbnail" />
       <a class='event' href="<%= Platz.buildEventLink(entry) %>"><%= entry.getTitle().getText() %></a>
       <div class='occurs-at'>
         <%= Platz.humanizeTime(entry.gd$when[0].startTime) %>
@@ -13,6 +10,5 @@
         <%= entry.gd$where[0].valueString %>
       </div>
     </li>
-	  	<br>
   <% }) %>
 </ul>
