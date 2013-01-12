@@ -34,10 +34,6 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = current_user.created_events.find(params[:id])
-    @location = Rack::Utils.escape(@event.street)
-    @map =  "http://maps.googleapis.com/maps/api/staticmap?markers=#{@location}&zoom=13&size=400x350&maptype=roadmap&sensor=false"
-
   end
 
   def destroy

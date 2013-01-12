@@ -24,3 +24,19 @@ Platz.humanizeTime = function humanizeTime(timeString) {
   var momentDate = moment(Date.parse(timeString));
   return momentDate.format('MMMM Do YYYY, h:mm:ss a');
 }
+
+Platz.buildEventLink = function buildEventLink(entry) {
+  var id = entry.id.$t;
+  return "/events/1?eid=" + encodeURIComponent(id);
+}
+Platz.getEid = function getEid(){
+  var eid;
+  $.each(document.location.search.replace("?", "").split("&"), function(index, value){
+    if(value.match(/eid=/)){
+      eid = value.split("=")[1];
+    }
+  });
+  if(eid){
+    return decodeURIComponent(eid);
+  }
+}

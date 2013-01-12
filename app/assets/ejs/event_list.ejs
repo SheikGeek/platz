@@ -5,7 +5,7 @@
 
     <li class="event-info">
       <span class="eventid" style="display:none;" eventid='<%= entry.id.$t %>'></span>
-      <a class='event' href=""><%= entry.getTitle().getText() %></a>
+      <a class='event' href="<%= Platz.buildEventLink(entry) %>"><%= entry.getTitle().getText() %></a>
       <div class='occurs-at'>
         <%= Platz.humanizeTime(entry.gd$when[0].startTime) %>
       </div>
