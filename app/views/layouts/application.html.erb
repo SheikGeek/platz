@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Eventagon</title>
-  <% Dir[Rails.root.join("app/assets/ejs/*.ejs")].each do |template| %>
+  <% Dir[Rails.root.join("lib/ejs/*.ejs")].each do |template| %>
     <script type="text/x-ejs" id="<%= File.basename(template, ".ejs").gsub(/[\s_]/, "-") %>-tmpl">
       <%= File.read(template).html_safe %>
     </script>
