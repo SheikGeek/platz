@@ -71,6 +71,12 @@ a:hover {
 
 .thumbnail{
 	padding: 0 10px 5px 0;
+	position: absolute;
+}
+
+.event-listing {
+	margin-left: 100px;
+	min-height: 100px;
 }
 
 .event-info{

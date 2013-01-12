@@ -2,6 +2,7 @@
   <% $.each(entries, function(index, entry){ %>
     <li class="event-info">
       <img src="http://placekitten.com/80/80" class="thumbnail" />
+	  <div class='event-listing'>
       <a class='event' href="<%= Platz.buildEventLink(entry) %>"><%= entry.getTitle().getText() %></a>
       <div class='occurs-at'>
         <%= Platz.humanizeTime(entry.gd$when[0].startTime) %>
@@ -9,6 +10,8 @@
       <div class='where'>
         <%= entry.gd$where[0].valueString %>
       </div>
+      </div>
+	  
     </li>
   <% }) %>
 </ul>

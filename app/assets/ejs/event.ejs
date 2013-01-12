@@ -5,6 +5,8 @@
       <%= event.gd$where[0].valueString %></br>
       <%= Platz.humanizeTime(event.gd$when[0].startTime) %> -
       <%= Platz.humanizeTime(event.gd$when[0].endTime) %>
+  <br><br>
+  <%= event.getContent().getText() %>
     </div>
   </div>
 
