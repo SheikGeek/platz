@@ -1,4 +1,6 @@
-<iframe class="event-calendar"src="https://www.google.com/calendar/embed?src=2d59pfgvh7109cp3k9g167d3f4%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="700" height="600" frameborder="0" scrolling="no"></iframe>
-<h3>Square Events</h3>
+<% unless params[:eid] %>
+  <iframe class="event-calendar"src="https://www.google.com/calendar/embed?src=2d59pfgvh7109cp3k9g167d3f4%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="700" height="600" frameborder="0" scrolling="no"></iframe>
+  <h3>Square Events</h3>
+<% end %>
 <div id='events'>
 </div>

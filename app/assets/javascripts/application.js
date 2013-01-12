@@ -27,7 +27,7 @@ Platz.humanizeTime = function humanizeTime(timeString) {
 
 Platz.buildEventLink = function buildEventLink(entry) {
   var id = entry.id.$t;
-  return "/events/1?eid=" + encodeURIComponent(id);
+  return "/events/?eid=" + encodeURIComponent(id);
 }
 Platz.getEid = function getEid(){
   var eid;
